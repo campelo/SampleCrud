@@ -1,0 +1,36 @@
+<h1>Seção</h1>
+<hr>
+<div class="col-md-6">
+  <form
+    #newSecaoForm="ngForm"
+    (ngSubmit)="save(newSecaoForm.value)"
+    autocomplete="off"
+    novalidate
+  >
+    <div
+      class="form-group"
+    >
+      <label for="descricao">Descrição:</label>
+      <input
+        [(ngModel)]="secao.descricao"
+        name="descricao"
+        required
+        id="descricao"
+        type="text"
+        class="form-control"
+        placeholder="Nome ou descrição da seção..."
+      />
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-primary"
+    >Save</button>
+    <button
+      type="button"
+      class="btn btn-default"
+      (click)="cancel()"
+    >Cancel</button>
+  </form>
+
+</div>

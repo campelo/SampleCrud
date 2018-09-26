@@ -1,0 +1,10 @@
+<div>
+  <h1>Seções</h1>
+  <hr/>
+  <button class="btn btn-primary" (click)="create()">Novo</button>
+  <div class="row">
+    <div class="col-md-5" *ngFor="let sec of secoes">
+      <div>{{sec.descricao}}</div>
+    </div>
+  </div>
+</div>
